@@ -10,6 +10,11 @@
     "build-prod": "parcel build src/index.html"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "@babel/core": "^7.9.6",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.5"
+  },
+  "dependencies": {
+    "mithril": "^2.0.4"
   }
 }
