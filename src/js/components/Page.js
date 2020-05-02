@@ -1,16 +1,14 @@
 import m from 'mithril';
+import { getData, url } from '../utils';
 
 let Page = {
     view: function(vnode) {
-        const url = process.env.JSON_URL;
         document.querySelector("#app").innerHTML = "";
         const g_id = vnode.attrs.gallery_id;
         const p_id = vnode.attrs.page_id;
         let next_page = parseInt(p_id) + 1;
         let previous_page = parseInt(p_id) - 1;
-        fetch(url).then((res) => {
-            return res.json();
-        }).then((data) => {
+        getData(url, function(data) {
             if(previous_page < 1) previous_page = parseInt(data[g_id-1].pages.length) - 1;
             if(next_page > data[g_id-1].pages.length) next_page = 1;
             document.querySelector("#app").innerHTML += 
