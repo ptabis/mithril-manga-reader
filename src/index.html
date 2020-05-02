@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>svelte-manga-reader</title>
+    <title>mithril-manga-reader</title>
     <link rel="stylesheet" href="css/index.scss">
 </head>
 <body>
+    <nav class="navbar navbar-dark fixed-top bg-primary d-flex flex-row flex-md-nowrap justify-content-start p-0 shadow">
+        <a class="mr-3" href="/"><img class="img-fluid logo" src="../public/img/logo.png"/></a>
+        <a class="text-white mr-3" href="/" style="cursor:pointer;">manga reader</a>
+        <a class="text-white mr-3" href="#" style="cursor:pointer;">Add database</a>
+    </nav>
+    <div class="container-fluid main-wrapper bg-secondary">
+        <div class="row h-100 d-flex justify-content-center">
+            <main id="app" class="col-11 px-4 py-2 border bg-dark">
+            </main>    
+        </div>
+    </div>
+    
     <script src="js/index.js"></script>
 </body>
 </html>

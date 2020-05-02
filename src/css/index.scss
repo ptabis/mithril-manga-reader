@@ -1,1 +1,15 @@
 @import "~bootstrap/scss/bootstrap";
+
+html, body {
+    height: 100%;
+}
+
+.logo {
+    max-width: 50px;
+    height: auto;
+}
+
+.main-wrapper {
+    padding-top: 70px;
+    height: 100%;
+}
