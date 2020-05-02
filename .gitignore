@@ -1,0 +1,8 @@
+.venv/
+dist/
+node_modules/
+.cache/
+.env
+*.db
+yarn.lock
+manga.json
