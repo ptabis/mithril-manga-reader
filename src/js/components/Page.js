@@ -12,7 +12,7 @@ let Page = {
             return res.json();
         }).then((data) => {
             if(previous_page < 1) previous_page = parseInt(data[g_id-1].pages.length) - 1;
-            if(next_page > data[g_id-1].pages.length-1) next_page = 1;
+            if(next_page > data[g_id-1].pages.length) next_page = 1;
             document.querySelector("#app").innerHTML += 
                 `<a href="/#!/g/${g_id}/page/${next_page}"><img src="${data[g_id-1].pages[p_id-1]}" width="50%" height="50%" /></a><br>` +
                 `<span id="page_nav">` +
